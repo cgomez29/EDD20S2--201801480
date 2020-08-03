@@ -18,6 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Nodo.cpp" />
+    <ClCompile Include="SimpleList.cpp" />
+    <ClCompile Include="Student.cpp" />
+    <ClCompile Include="Tarea1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Nodo.h" />
+    <ClInclude Include="SimpleList.h" />
+    <ClInclude Include="Student.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{916B6625-6E99-438E-B2D5-4AD4CCB52832}</ProjectGuid>
@@ -146,9 +159,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="ListaSimple.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

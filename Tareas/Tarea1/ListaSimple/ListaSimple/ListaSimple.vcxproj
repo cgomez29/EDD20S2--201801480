@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Nodo.cpp" />
+    <ClCompile Include="NodoG.cpp" />
     <ClCompile Include="SimpleList.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="Tarea1.cpp" />

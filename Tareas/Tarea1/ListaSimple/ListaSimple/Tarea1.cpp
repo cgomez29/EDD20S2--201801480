@@ -8,7 +8,6 @@ int main()
 
 	menu.menuPricipal();
 	
-
 	/*SimpleList* list = new SimpleList();
 	
 	Student std1;

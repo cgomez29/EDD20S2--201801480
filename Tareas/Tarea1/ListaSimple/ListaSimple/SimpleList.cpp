@@ -55,6 +55,13 @@ void SimpleList::delete_student(int idStudent)
 		{
 			if (aux->getNodo().getIdStudent() == idStudent)
 			{	
+				if (aux == this->head && aux->getNext() == nullptr)
+				{
+					this->head = nullptr;
+					this->tail = nullptr;
+					break;
+				}
+
 				previo->setNext(aux->getNext());
 
 				if (aux == this->head)

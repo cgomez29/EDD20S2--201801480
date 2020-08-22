@@ -20,7 +20,8 @@ void Menu::menuPricipal()
 		cout << "3. eliminar" << endl;
 		cout << "4. imprimir lista" << endl;
 		cout << "5. clonar" << endl;
-		cout << "6. salir" << endl;
+		cout << "6. Ver clone" << endl;
+		cout << "7 salir" << endl;
 		cout << ">> ";
 		cin >> opcion;
 
@@ -82,13 +83,27 @@ void Menu::menuPricipal()
 			while (aux != nullptr)
 			{
 				clone->add(aux->getNext()->getNodo());	
-			}		
+				aux = aux->getNext();
+			}
+			cout << "Clonación terminada" << endl;
+			cin >> espera;
+			break;		
 		}
 		case 6:
+		{
+			system("cls");
+			cout << "  ----------------" << endl;
+			clone->print();
+			cout << "  ----------------" << endl;
+			cin >> espera;
+			break;
+		}	
+		case 7:
 		{
 			break;
 		}
 		}
 	} while (opcion != 5);
+	//delete clone;
 	delete list;
 }

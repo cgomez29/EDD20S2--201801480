@@ -16,6 +16,5 @@ public:
 	//Nodo* search(string idStudent);
 	void delete_student(int idStudent);
 	void print();
-	Nodo* cloneList();
 };
 

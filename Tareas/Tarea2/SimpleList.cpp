@@ -23,6 +23,7 @@ void SimpleList::add(Student student)
 	}
 	else
 	{
+		newNodo->setNext(nullptr);
 		tail->setNext(newNodo);
 		tail = newNodo;
 	}

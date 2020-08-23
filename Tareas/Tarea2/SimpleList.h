@@ -10,7 +10,7 @@ public:
 
 	SimpleList();
 	~SimpleList();
-	
+
 	void add(Student student);
 	Nodo* search(int idStudent);
 	//Nodo* search(string idStudent);

@@ -13,7 +13,7 @@ Nodo::Nodo(Student student)
 	this->student = student;
 }
 
-Nodo* Nodo::getNext() 
+Nodo* Nodo::getNext()
 {
 	return this->next;
 }

@@ -10,7 +10,7 @@ SimpleList::SimpleList()
 	tail = nullptr;
 }
 
-void SimpleList::add(Student student) 
+void SimpleList::add(Student student)
 {
 	Nodo* newNodo;
 	newNodo = new Nodo(student);
@@ -55,7 +55,7 @@ void SimpleList::delete_student(int idStudent)
 		while (aux != nullptr)
 		{
 			if (aux->getNodo().getIdStudent() == idStudent)
-			{	
+			{
 				if (aux == this->head && aux->getNext() == nullptr)
 				{
 					this->head = nullptr;

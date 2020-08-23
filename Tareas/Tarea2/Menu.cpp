@@ -1,8 +1,6 @@
 #include "Menu.h"
 #include "SimpleList.h"
 #include "Student.h"
-#include <iostream>
-using namespace std;
 
 void Menu::menuPricipal()
 {
@@ -31,16 +29,16 @@ void Menu::menuPricipal()
 		{
 			system("cls");
 			cout << "AGREGAR ESTUDIANTE" << endl;
-			Student *student = new Student();
+			Student student;
 			cout << "Ingrese carnet" << endl;
 			cout << ">> ";
 			cin >> idStudent;
 			cout << "Ingrese nombre" << endl;
 			cout << ">> ";
 			cin >> name;
-			student->setIdStudent(idStudent);
-			student->setName(name);
-			list->add(*student);
+			student.setIdStudent(idStudent);
+			student.setName(name);
+			list->add(student);
 			break;
 		}
 		case 2:
@@ -82,28 +80,33 @@ void Menu::menuPricipal()
 			Nodo* aux = list->head;
 			while (aux != nullptr)
 			{
-				clone->add(aux->getNext()->getNodo());	
+				clone->add(aux->getNodo());
 				aux = aux->getNext();
 			}
-			cout << "ClonaciÃ³n terminada" << endl;
+			cout << "Clonación terminada" << endl;
 			cin >> espera;
-			break;		
+
+			//delete clone;
+			break;
 		}
 		case 6:
 		{
-			system("cls");
-			cout << "  ----------------" << endl;
-			clone->print();
-			cout << "  ----------------" << endl;
-			cin >> espera;
+			if (clone->head != nullptr)
+			{
+				system("cls");
+				cout << "  ----------------" << endl;
+				clone->print();
+				cout << "  ----------------" << endl;
+				cin >> espera;
+			}
 			break;
-		}	
+		}
 		case 7:
 		{
 			break;
 		}
 		}
-	} while (opcion != 5);
+	} while (opcion != 7);
 	//delete clone;
 	delete list;
 }

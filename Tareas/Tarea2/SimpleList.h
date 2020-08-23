@@ -15,6 +15,7 @@ public:
 	Nodo* search(int idStudent);
 	//Nodo* search(string idStudent);
 	void delete_student(int idStudent);
+	void limpiar();
 	void print();
 };
 

@@ -88,6 +88,18 @@ void SimpleList::delete_student(int idStudent)
 }
 
 
+void SimpleList::limpiar()
+{
+	Nodo* aux = this->head;
+	Nodo* temp;
+	while (aux != nullptr)
+	{
+		temp = aux->getNext();
+		delete aux;
+		aux = temp;
+	}
+	this->head = nullptr;
+}	
 
 
 void SimpleList::print()

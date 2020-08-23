@@ -77,11 +77,12 @@ void Menu::menuPricipal()
 		case 5:
 		{
 			//CLONAR
-			Nodo* aux = list->head;
-			while (aux != nullptr)
+			clone->limpiar();
+			Nodo* aux = list->head; //Constante 1
+			while (aux != nullptr) //Bucle n veces
 			{
-				clone->add(aux->getNodo());
-				aux = aux->getNext();
+				clone->add(aux->getNodo()); //Constante 2
+				aux = aux->getNext(); //Constante 3
 			}
 			cout << "Clonación terminada" << endl;
 			cin >> espera;
@@ -98,6 +99,10 @@ void Menu::menuPricipal()
 				clone->print();
 				cout << "  ----------------" << endl;
 				cin >> espera;
+			} 
+			else
+			{
+				cout << " Vacio!" << endl;
 			}
 			break;
 		}
@@ -107,6 +112,7 @@ void Menu::menuPricipal()
 		}
 		}
 	} while (opcion != 7);
-	//delete clone;
+	list->limpiar();
+	delete clone;
 	delete list;
 }
